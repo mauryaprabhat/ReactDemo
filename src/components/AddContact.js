@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export class AddContact extends React.Component{
 
@@ -30,7 +31,12 @@ export class AddContact extends React.Component{
                         <label>Email</label>
                         <input type="text" name="email" placeholder="Enter email" value={this.state.email} onChange={(e)=>this.setState({email:e.target.value})}  />
                     </div>
+                        
                         <button className="ui button blue">Add</button>
+
+                        <Link to="/">
+                            <button className="ui button  blue right ">Contact List</button>
+                        </Link>
                 </form>
             </div>
         );

@@ -1,7 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
-import {BrowserRouter as Router, Switch,Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Card } from './Card';
 import { Header } from "./Header";
 import{ ContactCard } from "./ContactCard";
@@ -102,9 +102,8 @@ function App() {
       <Router>
       <Header/>
         <Routes>
-          <Route path="/add" element={<AddContact/>}/>
           <Route path="/"  element={<ContactList/>}/>
-          
+          <Route path="/add" element={<AddContact/>}/>
             {/* <AddContact addContactHandler={ addContactHandler}/>
             <ContactList contacts={contacts}/> */}
         </Routes>
