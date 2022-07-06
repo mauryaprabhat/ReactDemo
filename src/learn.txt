@@ -1,0 +1,10 @@
+Functional component
+Prop ->Ability to pass prop to a funtion
+Event
+    onClick
+    onBlur
+    onChange => Attach the click event.
+Hooks
+    useState => initize the variable with value
+    useEffect=> Create a function to manipulate the value of state
+    useRef => Access the DOM element.
