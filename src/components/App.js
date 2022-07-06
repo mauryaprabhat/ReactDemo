@@ -1,6 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
+import {BrowserRouter as Router, Switch,Routes, Route} from 'react-router-dom';
 import { Card } from './Card';
 import { Header } from "./Header";
 import{ ContactCard } from "./ContactCard";
@@ -98,10 +99,17 @@ function App() {
 
   return(
     <div>
+      <Router>
       <Header/>
-      <AddContact addContactHandler={ addContactHandler}/>
-      {/* <ContactCard/> */}
-      <ContactList contacts={contacts}/>
+        <Routes>
+          <Route path="/add" element={<AddContact/>}/>
+          <Route path="/"  element={<ContactList/>}/>
+          
+            {/* <AddContact addContactHandler={ addContactHandler}/>
+            <ContactList contacts={contacts}/> */}
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
